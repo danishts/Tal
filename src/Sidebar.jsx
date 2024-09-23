@@ -14,9 +14,9 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="flex">
+    <div className="flex ">
       <button
-        className="p-4 bg-white text-black md:hidden"
+        className="p-4 bg-white  text-black md:hidden"
         onClick={() => setIsOpen(prev => !prev)}
       >
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -35,25 +35,25 @@ const Sidebar = () => {
         </div>
 
         <nav className="space-y-4">
-          <NavLink to="/dashboard" className="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700" onClick={() => setIsOpen(false)}>
+          <NavLink to="/dashboard" className="block py-2.5 px-4 text-[#007744] rounded transition duration-200 hover:bg-gray-700" onClick={() => setIsOpen(false)}>
             Dashboard
           </NavLink>
-          <NavLink to="/dashboard/check-ins" className="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700" onClick={() => setIsOpen(false)}>
+          <NavLink to="/dashboard/check-ins" className="block py-2.5 px-4 text-[#007744] rounded transition duration-200 hover:bg-gray-700" onClick={() => setIsOpen(false)}>
             Check-ins
           </NavLink>
-          <NavLink to="/dashboard/users" className="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700" onClick={() => setIsOpen(false)}>
+          <NavLink to="/dashboard/users" className="block py-2.5 px-4 rounded text-[#007744] transition  duration-200 hover:bg-gray-700" onClick={() => setIsOpen(false)}>
             Users
           </NavLink>
-          <NavLink to="/dashboard/welfare" className="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700" onClick={() => setIsOpen(false)}>
+          <NavLink to="/dashboard/welfare" className="block py-2.5 px-4 rounded text-[#007744] transition duration-200 hover:bg-gray-700" onClick={() => setIsOpen(false)}>
             Welfare
           </NavLink>
-          <NavLink to="/dashboard/employers" className="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700" onClick={() => setIsOpen(false)}>
+          <NavLink to="/dashboard/employers" className="block py-2.5 px-4 rounded text-[#007744] transition duration-200 hover:bg-gray-700" onClick={() => setIsOpen(false)}>
             Employers
           </NavLink>
-          <NavLink to="/dashboard/approvals" className="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700" onClick={() => setIsOpen(false)}>
+          <NavLink to="/dashboard/approvals" className="block py-2.5 px-4 rounded text-[#007744] transition duration-200 hover:bg-gray-700" onClick={() => setIsOpen(false)}>
             Approvals
           </NavLink>
-          <NavLink to="/dashboard/settings" className="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700" onClick={() => setIsOpen(false)}>
+          <NavLink to="/dashboard/settings" className="block py-2.5 px-4 rounded text-[#007744] transition duration-200 hover:bg-gray-700" onClick={() => setIsOpen(false)}>
             Settings
           </NavLink>
         </nav>
