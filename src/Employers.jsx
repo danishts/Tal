@@ -8,4 +8,4 @@ function Employers() {
   )
 }
 
-export default Employers
+export default Employers;
