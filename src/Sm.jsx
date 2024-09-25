@@ -1,17 +1,17 @@
-import React from 'react'
+// import React from 'react'
 
-import Sidebar from './Sidebar';
-import Menubar from './Menubar';
+// import Sidebar from './Sidebar';
+// import Menubar from './Menubar';
 
-function Include() {
-  return (
-    <div>
+// function Include() {
+//   return (
+//     <div>
     
-          <Sidebar />
-          <Menubar/>
+//           <Sidebar />
+//           <Menubar/>
           
-    </div>
-  )
-}
+//     </div>
+//   )
+// }
 
-export default Include;
+// export default Include;

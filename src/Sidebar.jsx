@@ -6,27 +6,28 @@ import logo2 from "./assets/logo2.png";
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate(); 
 
   const handleLogout = () => {
-    // Perform any logout logic here (if needed)
-    navigate('/login'); // Redirect to login
+   setIsOpen(false)
+    navigate('/login');
+    
   };
 
   return (
     <div className="flex ">
       <button
-        className="p-4 bg-white  text-black md:hidden"
+        className="p-2 mb-28 bg-white  text-black md:hidden"
         onClick={() => setIsOpen(prev => !prev)}
       >
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <svg className="w-6 h-6 " fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
         </svg>
       </button>
 
       <div className={`${
           isOpen ? "block" : "hidden"
-        } md:block fixed md:static bg-gray-800 text-white h-screen p-4 w-64 space-y-6 transition duration-300`}
+        } md:block fixed md:static bg-[white] shadow-md text-white h-screen p-4 w-64 space-y-6 transition duration-300  z-30`}
       >
         <button className="text-white md:hidden mb-4" onClick={() => setIsOpen(false)}>Close</button>
 
@@ -35,25 +36,25 @@ const Sidebar = () => {
         </div>
 
         <nav className="space-y-4">
-          <NavLink to="/dashboard" className="block py-2.5 px-4 text-[#007744] rounded transition duration-200 hover:bg-gray-700" onClick={() => setIsOpen(false)}>
+          <NavLink to="/dashboard" className="block py-2.5 px-12 text-[#007744] rounded transition duration-200 hover:bg-[#0077441A;]" onClick={() => setIsOpen(false)}>
             Dashboard
           </NavLink>
-          <NavLink to="/dashboard/check-ins" className="block py-2.5 px-4 text-[#007744] rounded transition duration-200 hover:bg-gray-700" onClick={() => setIsOpen(false)}>
+          <NavLink to="/dashboard/check-ins" className="block py-2.5 px-12 text-[#007744] rounded transition duration-200 hover:bg-[#0077441A;]" onClick={() => setIsOpen(false)}>
             Check-ins
           </NavLink>
-          <NavLink to="/dashboard/users" className="block py-2.5 px-4 rounded text-[#007744] transition  duration-200 hover:bg-gray-700" onClick={() => setIsOpen(false)}>
+          <NavLink to="/dashboard/users" className="block py-2.5 px-12 rounded text-[#007744] transition  duration-200 hover:bg-[#0077441A;]" onClick={() => setIsOpen(false)}>
             Users
           </NavLink>
-          <NavLink to="/dashboard/welfare" className="block py-2.5 px-4 rounded text-[#007744] transition duration-200 hover:bg-gray-700" onClick={() => setIsOpen(false)}>
+          <NavLink to="/dashboard/welfare" className="block py-2.5 px-12 rounded text-[#007744] transition duration-200 hover:bg-[#0077441A;]" onClick={() => setIsOpen(false)}>
             Welfare
           </NavLink>
-          <NavLink to="/dashboard/employers" className="block py-2.5 px-4 rounded text-[#007744] transition duration-200 hover:bg-gray-700" onClick={() => setIsOpen(false)}>
+          <NavLink to="/dashboard/employers" className="block py-2.5 px-12 rounded text-[#007744] transition duration-200 hover:bg-[#0077441A;]" onClick={() => setIsOpen(false)}>
             Employers
           </NavLink>
-          <NavLink to="/dashboard/approvals" className="block py-2.5 px-4 rounded text-[#007744] transition duration-200 hover:bg-gray-700" onClick={() => setIsOpen(false)}>
+          <NavLink to="/dashboard/approvals" className="block py-2.5 px-12 rounded text-[#007744] transition duration-200 hover:bg-[#0077441A;]" onClick={() => setIsOpen(false)}>
             Approvals
           </NavLink>
-          <NavLink to="/dashboard/settings" className="block py-2.5 px-4 rounded text-[#007744] transition duration-200 hover:bg-gray-700" onClick={() => setIsOpen(false)}>
+          <NavLink to="/dashboard/settings" className="block py-2.5 px-12 rounded text-[#007744] transition duration-200 hover:bg-[#0077441A;]" onClick={() => setIsOpen(false)}>
             Settings
           </NavLink>
         </nav>
@@ -66,7 +67,7 @@ const Sidebar = () => {
 
      
           <div className="absolute bottom-4 w-full px-4">
-          <button onClick={handleLogout} className="block py-2.5 px-4 rounded transition duration-200">
+          <button onClick={handleLogout} className="block py-2.5 px-12 rounded text-[#007744] transition duration-200 hover:bg-[#0077441A;]">
             Logout
           </button>
         </div>
